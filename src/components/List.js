@@ -1,14 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
+
 
 const List = () => {
 
-  const array = ['hola', 'caracola'];
+  const [array, setArray] = useState(["hola","caracola"])
 
   return (
     <div className="list">
       {
-        array.map((item) =>
-        <p>{item}</p>
+        array.map((item, index) =>
+          <p key={index}>{item}</p>
         )
       }
 
