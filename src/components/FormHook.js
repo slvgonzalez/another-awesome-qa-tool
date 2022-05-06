@@ -6,8 +6,8 @@ const FormHook = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
 
   const [ entries, setEntries ] = useState([{
-    pregunta: "First question",
-    respuesta: "First answer"
+    question: "First question",
+    answer: "First answer"
     }])
 
 
@@ -19,35 +19,35 @@ const FormHook = () => {
 
     return (
       <>
-        <h1>this is the form using Form Hook</h1>
+      <h3>Add a new question</h3>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="name">Question:</label>
           <input
              className="form-control my-2"
-             id="pregunta"
+             id="question"
              type="text"
-             {...register('pregunta', { required: true, minLength: 10 })}
+             {...register('question', { required: true, minLength: 10 })}
           />
 
-          { errors.pregunta && errors.pregunta.type === "required" && <span className="text-danger text-small d-block mb-2">A question is required.</span> }
-          {errors.pregunta && errors.pregunta.type === "minLength" && <span className="text-danger text-small d-block mb-2">The question must have at least 10 characters.</span>}
+          { errors.question && errors.question.type === "required" && <span className="text-danger text-small d-block mb-2">A question is required.</span> }
+          {errors.question && errors.question.type === "minLength" && <span className="text-danger text-small d-block mb-2">The question must have at least 10 characters.</span>}
 
           <label htmlFor="name">Answer:</label>
           <input
             className="form-control my-2"
-            id="respuesta"
+            id="answer"
             type="text"
-            {...register('respuesta', { required: true, minLength: 10 })}
+            {...register('answer', { required: true, minLength: 10 })}
           />
 
-          {errors.respuesta && errors.respuesta.type === "required" && <span className="text-danger text-small d-block mb-2">An answer is required</span>}
-          {errors.respuesta && errors.respuesta.type === "minLength" && <span className="text-danger text-small d-block mb-2">The answer must be elavorated (min 10 characters).</span>}
+          {errors.answer && errors.answer.type === "required" && <span className="text-danger text-small d-block mb-2">An answer is required</span>}
+          {errors.answer && errors.answer.type === "minLength" && <span className="text-danger text-small d-block mb-2">The answer must be elavorated (min 10 characters).</span>}
 
           <button className="btn btn-primary">Add question</button>
         </form>
         <ul>
           { entries.map( (element, index) =>
-            <li key={index}> {element.pregunta} - {element.respuesta} </li>
+            <li key={index}> {element.question} - {element.answer} </li>
           ) }
         </ul>
       </>

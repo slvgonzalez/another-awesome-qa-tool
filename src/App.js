@@ -6,10 +6,16 @@ import FormHook from './components/FormHook.js'
 import './App.css';
 
 function App() {
+
+  const entry = {
+    question: "gkjhdgkhdhgfkkd",
+    answer: "jsjfjfjfrdririojdr"
+  }
+
   return (
     <div className="container mt-5">
       <h1>The awesome Q&A tool</h1>
-      <Entry pregunta="jkhjfhjkfjhdjh" respuesta="hayfjijfirdidr" />
+      <Entry pregunta={entry.question} respuesta={entry.question} />
       <FormHook />
     </div>
   );
