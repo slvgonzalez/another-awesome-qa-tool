@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState }from "react";
 import { useForm } from "react-hook-form";
 
 const FormHook = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
 
-  const onSubmit = (data, e) => {
-    console.log(data)
+  const [ entries, setEntries ] = useState([{
+    pregunta: "First question",
+    respuesta: "First answer"
+    }])
+
+
+  const onSubmit = (newEntry, e) => {
+    console.log(newEntry)
     e.target.reset();
+    setEntries([...entries, newEntry])
   }
+
+
 
     return (
       <>
@@ -16,8 +25,8 @@ const FormHook = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="name">Question:</label>
           <input
-             id="pregunta"
              className="form-control my-2"
+             id="pregunta"
              type="text"
              {...register('pregunta', { required: true, minLength: 10 })}
           />
@@ -27,8 +36,8 @@ const FormHook = () => {
 
           <label htmlFor="name">Answer:</label>
           <input
-            id="respuesta"
             className="form-control my-2"
+            id="respuesta"
             type="text"
             {...register('respuesta', { required: true, minLength: 10 })}
           />
