@@ -3,8 +3,8 @@ import React, {useState} from 'react'
 
 const Form = () => {
   const [list, setList] = useState({
-    question: "",
-    answer: ""
+    question: "This will be the first questions",
+    answer: "This will be the answer"
   })
 
   const handleInputChange = (event) => {
