@@ -2,3 +2,8 @@ h1 {
   text-align: center;
   font-size: 5vh;
 }
+
+.submit-button {
+  max-width: 45%;
+  margin-top: 1rem;
+}
