@@ -46,8 +46,8 @@ const FormHook = () => {
           <button className="btn btn-primary">Add question</button>
         </form>
         <ul>
-          { entries.map( element =>
-            <li key={index}>{element.pregunta} - {element.respuesta} </li>
+          { entries.map( (element, index) =>
+            <li key={index}> {element.pregunta} - {element.respuesta} </li>
           ) }
         </ul>
       </>
