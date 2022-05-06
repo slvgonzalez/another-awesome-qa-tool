@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Entry = () => {
+const Entry = ({entries}) => {
 
   const entry = {
     question: "gkjhdgkhdhgfkkd",
@@ -11,10 +11,9 @@ const Entry = () => {
 
   return (
     <div className="list">
-      <h3>Listed questions</h3>
       <details>
-       <summary>Q: {entry.question}</summary>
-        <p>A: {entry.answer}</p>
+       <summary>Q: {entries.question}</summary>
+        <p>A: {entries.answer}</p>
       </details>
     </div>
   )

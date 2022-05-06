@@ -15,6 +15,7 @@ const FormHook = () => {
     console.log(newEntry)
     setEntries([...entries, newEntry])
     e.target.reset();
+    <Entry />
   }
 
     return (
