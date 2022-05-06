@@ -5,8 +5,9 @@ const FormHook = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, e) => {
     console.log(data)
+    e.target.reset();
   }
 
     return (
