@@ -16,8 +16,9 @@ const Form = () => {
   }
 
   const sendQuestion = (event) => {
-    event.prevent.default();
-    console.log(list.name + " " + list.answer)
+    event.preventDefault();
+
+    console.log(list.question + " " + list.answer)
   }
 
 
