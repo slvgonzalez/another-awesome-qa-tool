@@ -13,11 +13,9 @@ const FormHook = () => {
 
   const onSubmit = (newEntry, e) => {
     console.log(newEntry)
-    e.target.reset();
     setEntries([...entries, newEntry])
+    e.target.reset();
   }
-
-
 
     return (
       <>
@@ -47,6 +45,11 @@ const FormHook = () => {
 
           <button className="btn btn-primary">Add question</button>
         </form>
+        <ul>
+          { entries.map( element =>
+            <li key={index}>{element.pregunta} - {element.respuesta} </li>
+          ) }
+        </ul>
       </>
     )
 }
