@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 
 const FormHook = () => {
 
-  const { register, errors, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm()
 
   const onSubmit = (data) => {
     console.log(data)
@@ -13,37 +13,28 @@ const FormHook = () => {
       <>
         <h1>this is the form using Form Hook</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
+          <label htmlFor="name">Question:</label>
           <input
-            className="form-control my-2"
-            {...register('pregunta', {
-                required: {
-                  value: true,
-                  message: "A question is required",
-                  },
-                minLength: {
-                  value: 10,
-                  message: "The question should be at least 10 characters long"
-                }
-              })
-            }
+             id="pregunta"
+             className="form-control my-2"
+             type="text"
+             {...register('pregunta', { required: true, minLength: 10 })}
           />
-          <input
-            className="form-control my-2"
-            {...register('respuesta',{
-                required: {
-                  value: true,
-                  message: "An answer is required",
-                  },
-                minLength: {
-                  value: 10,
-                  message: "The answer should be at least 10 characters long"
-                }
-              })
-            }
-          />
-          <span className="text-danger text-small d-block mb-2">
 
-          </span>
+          { errors.pregunta && errors.pregunta.type === "required" && <span className="text-danger text-small d-block mb-2">A question is required.</span> }
+          {errors.pregunta && errors.pregunta.type === "minLength" && <span className="text-danger text-small d-block mb-2">The question must have at least 10 characters.</span>}
+
+          <label htmlFor="name">Answer:</label>
+          <input
+            id="respuesta"
+            className="form-control my-2"
+            type="text"
+            {...register('respuesta', { required: true, minLength: 10 })}
+          />
+
+          {errors.respuesta && errors.respuesta.type === "required" && <span className="text-danger text-small d-block mb-2">An answer is required</span>}
+          {errors.respuesta && errors.respuesta.type === "minLength" && <span className="text-danger text-small d-block mb-2">The answer must be elavorated (min 10 characters).</span>}
+
           <button className="btn btn-primary">Add question</button>
         </form>
       </>
