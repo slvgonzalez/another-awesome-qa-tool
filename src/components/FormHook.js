@@ -14,7 +14,7 @@ const FormHook = () => {
         <h1>this is the form using Form Hook</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
-            className="question_input my-6"
+            className="form-control my-2"
             {...register('pregunta', {
                 required: {
                   value: true,
@@ -22,26 +22,29 @@ const FormHook = () => {
                   },
                 minLength: {
                   value: 10,
-                  message: "Min 10 characters"
+                  message: "The question should be at least 10 characters long"
                 }
               })
             }
           />
           <input
-            className="question_input my-6"
+            className="form-control my-2"
             {...register('respuesta',{
                 required: {
                   value: true,
-                  message: "A question is required",
+                  message: "An answer is required",
                   },
                 minLength: {
                   value: 10,
-                  message: "Min 10 characters"
+                  message: "The answer should be at least 10 characters long"
                 }
               })
             }
           />
-          <button>Add question</button>
+          <span className="text-danger text-small d-block mb-2">
+            error message
+          </span>
+          <button className="btn btn-primary">Add question</button>
         </form>
       </>
     )
