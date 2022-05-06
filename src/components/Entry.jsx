@@ -1,13 +1,20 @@
 import React from 'react'
 
-const Entry = (props) => {
-  console.log()
+const Entry = () => {
+
+  const entry = {
+    question: "gkjhdgkhdhgfkkd",
+    answer: "jsjfjfjfrdririojdr"
+  }
+
+
+
   return (
     <div className="list">
       <h3>Listed questions</h3>
       <details>
-       <summary>Q: {props.pregunta}</summary>
-        <p>A: {props.respuesta}</p>
+       <summary>Q: {entry.question}</summary>
+        <p>A: {entry.answer}</p>
       </details>
     </div>
   )
