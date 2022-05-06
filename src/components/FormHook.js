@@ -42,7 +42,7 @@ const FormHook = () => {
             }
           />
           <span className="text-danger text-small d-block mb-2">
-            error message
+
           </span>
           <button className="btn btn-primary">Add question</button>
         </form>
