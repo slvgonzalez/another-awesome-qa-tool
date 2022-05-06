@@ -1,10 +1,11 @@
+import React from 'react';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
      <h1>The awesome Q&A tool</h1>
-    </div>
+    </ React.Fragment >
   );
 }
 
