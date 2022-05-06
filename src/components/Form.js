@@ -15,11 +15,16 @@ const Form = () => {
     })
   }
 
+  const sendQuestion = (event) => {
+    event.prevent.default();
+    console.log(list.name + " " + list.answer)
+  }
+
 
 
   return (
     <div>
-      <form className="row">
+      <form className="row" onSubmit={sendQuestion}>
         <div className="col-md-3">
           <input
             className="form-control"
