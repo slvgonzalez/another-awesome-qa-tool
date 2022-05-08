@@ -8,8 +8,8 @@ const QuestionList = ({entries}) => {
 
     <div className="card">
       <details>
-      <summary>Q:{entry.question}</summary>
-        <p>A: {entry.answer}</p>
+      <summary><strong>Q:</strong>{entry.question}</summary>
+        <p><strong>A:</strong>{entry.answer}</p>
       </details>
       <button className="btn btn-primary">Edit</button>
       <button className="btn btn-primary">Delete</button>
