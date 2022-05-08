@@ -6,7 +6,7 @@ const QuestionList = ({entries}) => {
 
   const listEntries = entries.map((entry) =>
 
-    <div className="card">
+    <div className="card" key={entry.id}>
       <details>
       <summary><strong>Q:</strong>{entry.question}</summary>
         <p><strong>A:</strong>{entry.answer}</p>

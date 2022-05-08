@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import FormHook from './components/FormHook.js'
 import QuestionList from './components/QuestionList.jsx';
+import { v4 as uuidv4 } from 'uuid';
 //import Form from './components/Form.js'
-
 import './App.css';
+
 
 function App() {
 
   const entry = {
     question: "esto seriadfkjhkshkf",
-    answer: "jfdjijiesfijieeis"
+    answer: "jfdjijiesfijieeis",
+    id: uuidv4()
   }
 
   const [entries, setEntries] = useState([entry])
