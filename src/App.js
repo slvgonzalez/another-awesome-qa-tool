@@ -7,17 +7,11 @@ import './App.css';
 
 function App(props) {
 
-  const displayEntries = entries.map((each, index) =>
-    <Entry key={index} question={each.question} answer={each.answer}/>
-  );
-
-
   return (
     <div className="container mt-5">
       <h1>The awesome Q&A tool</h1>
-      <h3>Listed questions</h3>
-      {displayEntries}
       <FormHook />
+      <h3>Listed questions</h3>
     </div>
   );
 }

@@ -1,13 +1,12 @@
 import React from 'react'
 
+
 const Entry = ({entries}) => {
 
-  const entry = {
+  const myentry = {
     question: "gkjhdgkhdhgfkkd",
     answer: "jsjfjfjfrdririojdr"
   }
-
-
 
   return (
     <div className="list">
