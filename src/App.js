@@ -1,17 +1,27 @@
-import React from 'react';
-import Entry from './components/Entry.jsx'
+import React, { useState } from 'react';
 import FormHook from './components/FormHook.js'
+import QuestionList from './components/QuestionList.jsx';
 //import Form from './components/Form.js'
 
 import './App.css';
 
-function App(props) {
+function App() {
+
+  const entry = {
+    question: "esto seriadfkjhkshkf",
+    answer: "jfdjijiesfijieeis"
+  }
+
+  const [entries, setEntries] = useState([entry])
+
+
 
   return (
     <div className="container mt-5">
       <h1>The awesome Q&A tool</h1>
       <FormHook />
       <h3>Listed questions</h3>
+      <QuestionList entries={entries} />
     </div>
   );
 }

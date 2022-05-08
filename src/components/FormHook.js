@@ -1,6 +1,5 @@
 import React, { useState }from "react";
 import { useForm } from "react-hook-form";
-import Entry from './components/Entry.jsx'
 
 const FormHook = () => {
 
