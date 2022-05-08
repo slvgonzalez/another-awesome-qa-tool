@@ -16,14 +16,22 @@ function App() {
 
   const [entries, setEntries] = useState([entry])
 
+  const addQuestion = (newQuestion) => {
+    newQuestion.id = uuidv4();
+  }
+
+  const deleteQuestion = (id) => {
+    setEntries(entries.filter( entry => entry.id !== id))
+  }
+
 
 
   return (
     <div className="container mt-5">
       <h1>The awesome Q&A tool</h1>
-      <FormHook />
+      <FormHook addQuestion={addQuestion}/>
       <h3>Listed questions</h3>
-      <QuestionList entries={entries} />
+      <QuestionList entries={entries} deteteQuestion={deleteQuestion} />
     </div>
   );
 }

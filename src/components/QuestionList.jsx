@@ -1,10 +1,10 @@
 import React from 'react'
 
-const QuestionList = ({entries}) => {
+const QuestionList = (props) => {
 
-  console.log(entries)
+  console.log(props.entries)
 
-  const listEntries = entries.map((entry) =>
+  const listEntries = props.entries.map((entry) =>
 
     <div className="card" key={entry.id}>
       <details>
@@ -12,7 +12,12 @@ const QuestionList = ({entries}) => {
         <p><strong>A:</strong>{entry.answer}</p>
       </details>
       <button className="btn btn-primary">Edit</button>
-      <button className="btn btn-primary">Delete</button>
+      <button
+        className="btn btn-primary"
+        onClick={() => props.deleteQuestion(entry.id)}
+        >
+          Delete
+      </button>
     </div>
   )
 

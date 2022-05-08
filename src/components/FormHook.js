@@ -1,7 +1,7 @@
 import React, { useState }from "react";
 import { useForm } from "react-hook-form";
 
-const FormHook = () => {
+const FormHook = (props) => {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
 
@@ -12,8 +12,9 @@ const FormHook = () => {
 
 
   const onSubmit = (newEntry, e) => {
-    e.preventDefault()
-    setEntries([...entries, newEntry])
+    //console.log(newEntry)
+    props.addQuestion(newEntry);
+    setEntries([...entries, newEntry]);
     e.target.reset();
   }
 
