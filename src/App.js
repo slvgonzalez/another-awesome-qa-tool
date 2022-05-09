@@ -26,13 +26,12 @@ function App() {
   }
 
 
-
   return (
     <div className="container mt-5">
       <h1>The awesome Q&A tool</h1>
-      <FormHook addQuestion={addQuestion}/>
+      <FormHook addQuestion={addQuestion}  />
       <h3>Listed questions</h3>
-      <QuestionList entries={entries} deteteQuestion={deleteQuestion} />
+      <QuestionList entries={entries} deleteQuestion={deleteQuestion} />
     </div>
   );
 }

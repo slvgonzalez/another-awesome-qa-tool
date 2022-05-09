@@ -16,14 +16,11 @@ const QuestionList = (props) => {
       <button
         className="btn btn-primary"
         onClick={() => props.deleteQuestion(entry.id)}
-        >
-          Delete
-      </button>
+        >Delete</button>
     </div>
   )
 
   return (
-
     <div className="list">
       {listEntries}
     </div>
