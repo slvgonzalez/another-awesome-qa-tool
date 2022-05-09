@@ -78,12 +78,11 @@ function App() {
       {
         (entries.length > 0) ? (
           <div className="justify-content-center">
-            <h3>Listed questions</h3>
             <div className='action-buttons'>
               <button className="btn btn-sort" onClick={() => sortAlphabetically(entries)}>Sort</button>
               <button className="btn btn-delete" onClick={() => deleteAll()}>Delete all</button>
             </div>
-            <div className="wrapper">
+            <div className="wrapper entries">
               <QuestionList
                 entries={entries}
                 deleteQuestion={deleteQuestion}

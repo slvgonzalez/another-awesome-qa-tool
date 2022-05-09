@@ -5,6 +5,18 @@
   border-radius: 1rem;
   flex-wrap: wrap;
   color: #fff;
+  margin-bottom: 1rem;
+}
+
+.wrapper .entries {
+  background-color: #0d172a;
+}
+
+form {
+  display: flex;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
