@@ -24,7 +24,7 @@ const Form = () => {
 
 
   return (
-    <div>
+    <>
       <form className="row" onSubmit={sendQuestion}>
         <div className="col-md-3">
           <input
@@ -46,7 +46,7 @@ const Form = () => {
         </div>
         <button className="btn btn-primary submit-button" type="submit">Add question</button>
       </form>
-    </div>
+    </>
   )
 }
 

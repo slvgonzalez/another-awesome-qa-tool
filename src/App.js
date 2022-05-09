@@ -48,6 +48,10 @@ function App() {
     setEntries(entries.map( entry => (entry.id === id ? updatedEntry : entry )))
   }
 
+  const deleteAll = () => {
+    setEntries([])
+  }
+
 
   return (
     <div className="container mt-5">
@@ -56,6 +60,8 @@ function App() {
         (entries.length > 0) ? (
           <div className="listed">
             <h3>Listed questions</h3>
+            <button onClick={() => deleteAll}>Sort alphabetically</button>
+            <button>Delete all</button>
             <QuestionList
               entries={entries}
               deleteQuestion={deleteQuestion}
