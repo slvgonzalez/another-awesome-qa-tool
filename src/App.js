@@ -43,6 +43,11 @@ function App() {
     })
   }
 
+  const updateEntry = (id, updatedEntry) => {
+    setEditing(false);
+    setEntries(entries.map( entry => (entry.id === id ? updatedEntry : entry )))
+  }
+
 
   return (
     <div className="container mt-5">
@@ -60,7 +65,7 @@ function App() {
         ) :  <h3>Try adding a question.</h3>
       }
 
-      { editing ? ( <EditForm selected={selected}/> ): (<FormHook addQuestion={addQuestion}  />) }
+      { editing ? ( <EditForm selected={selected} updateEntry={updateEntry}/>): (<FormHook addQuestion={addQuestion}  />) }
     </div>
   )
 }
