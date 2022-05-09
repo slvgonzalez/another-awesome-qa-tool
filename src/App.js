@@ -18,6 +18,7 @@ function App() {
 
   const addQuestion = (newQuestion) => {
     newQuestion.id = uuidv4();
+    setEntries([...entries, newQuestion])
   }
 
   const deleteQuestion = (id) => {

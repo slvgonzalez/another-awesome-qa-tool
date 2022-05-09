@@ -14,7 +14,6 @@ const FormHook = (props) => {
   const onSubmit = (newEntry, e) => {
     //console.log(newEntry)
     props.addQuestion(newEntry);
-    setEntries([...entries, newEntry]);
     e.target.reset();
   }
 
