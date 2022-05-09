@@ -10,8 +10,8 @@ import EditForm from './components/EditForm.js';
 function App() {
 
   const entry = {
-    question: "What is taking me ",
-    answer: "Lots of",
+    question: "Will I complete the assigment by Tuesday?",
+    answer: "I hope so, I can't promise the form will be properly styled tough 😭",
     id: uuidv4()
   }
 
@@ -71,7 +71,7 @@ function App() {
   return (
     <div className="container mt-5">
 
-      <h1>The awesome Q&A tool</h1>
+      <h1>The not so awesome Q&A tool</h1>
 
       { editing ? ( <EditForm selected={selected} updateEntry={updateEntry}/>): (<FormHook addQuestion={addQuestion}  />) }
 
