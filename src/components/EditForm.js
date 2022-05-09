@@ -5,11 +5,6 @@ const EditForm = (props) => {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
 
-  const [ entries, setEntries ] = useState([{
-    question: "First question",
-    answer: "First answer"
-  }])
-
 
   const onSubmit = (newEntry, e) => {
     //console.log(newEntry)
@@ -43,7 +38,7 @@ const EditForm = (props) => {
         {errors.answer && errors.answer.type === "required" && <span className="text-danger text-small d-block mb-2">An answer is required</span>}
         {errors.answer && errors.answer.type === "minLength" && <span className="text-danger text-small d-block mb-2">The answer must be elavorated (min 10 characters).</span>}
 
-        <button className="btn btn-primary">Add question</button>
+        <button className="btn btn-primary">Save changes</button>
       </form>
     </>
   )
