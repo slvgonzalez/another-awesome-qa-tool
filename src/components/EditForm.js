@@ -1,7 +1,7 @@
 import React, { useState }from "react";
 import { useForm } from "react-hook-form";
 
-const FormHook = (props) => {
+const EditForm = (props) => {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
 
@@ -49,4 +49,4 @@ const FormHook = (props) => {
   )
 }
 
-export default FormHook
+export default EditForm

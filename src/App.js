@@ -25,13 +25,17 @@ function App() {
     setEntries(entries.filter( entry => entry.id !== id))
   }
 
+  const editQuestion = () => {
+
+  }
+
 
   return (
     <div className="container mt-5">
       <h1>The awesome Q&A tool</h1>
       <FormHook addQuestion={addQuestion}  />
       <h3>Listed questions</h3>
-      <QuestionList entries={entries} deleteQuestion={deleteQuestion} />
+      <QuestionList entries={entries} editQuestion={editQuestion} deleteQuestion={deleteQuestion} />
     </div>
   );
 }
