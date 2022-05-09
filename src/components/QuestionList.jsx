@@ -6,19 +6,21 @@ const QuestionList = (props) => {
 
   const listEntries = props.entries.map((entry) =>
 
-    <div className="card" key={entry.id}>
+    <div className="wrapper card" key={entry.id}>
       <details>
       <summary><strong>Q:</strong>{entry.question}</summary>
         <p><strong>A:</strong>{entry.answer}</p>
       </details>
-      <button
-        className="btn btn-primary"
-        onClick={() => {props.editEntry(entry)}}>
-        Edit</button>
-      <button
-        className="btn btn-primary"
-        onClick={() => props.deleteQuestion(entry.id)}>
-        Delete</button>
+      <div className="actions">
+        <button
+          className="btn btn-primary"
+          onClick={() => {props.editEntry(entry)}}>
+          Edit</button>
+        <button
+          className="btn btn-primary"
+          onClick={() => props.deleteQuestion(entry.id)}>
+          Delete</button>
+      </div>
     </div>
   )
 

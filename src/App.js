@@ -55,7 +55,11 @@ function App() {
 
   return (
     <div className="container mt-5">
+
       <h1>The awesome Q&A tool</h1>
+
+      { editing ? ( <EditForm selected={selected} updateEntry={updateEntry}/>): (<FormHook addQuestion={addQuestion}  />) }
+
       {
         (entries.length > 0) ? (
           <>
@@ -73,10 +77,9 @@ function App() {
         ) :  (
           <div className="wrapper">
             <h3>Try adding a question.</h3>
-          </div> )
+          </div>
+        )
       }
-
-      { editing ? ( <EditForm selected={selected} updateEntry={updateEntry}/>): (<FormHook addQuestion={addQuestion}  />) }
     </div>
   )
 }

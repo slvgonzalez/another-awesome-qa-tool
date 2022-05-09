@@ -18,7 +18,7 @@ const EditForm = (props) => {
   return (
     <>
     <h3>Edit question</h3>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="wrapper">
         <label htmlFor="name">Question:</label>
         <input
             className="form-control my-2"
