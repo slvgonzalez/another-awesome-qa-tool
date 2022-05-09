@@ -58,17 +58,22 @@ function App() {
       <h1>The awesome Q&A tool</h1>
       {
         (entries.length > 0) ? (
-          <div className="listed">
+          <>
             <h3>Listed questions</h3>
-            <button onClick={() => deleteAll}>Sort alphabetically</button>
-            <button>Delete all</button>
-            <QuestionList
-              entries={entries}
-              deleteQuestion={deleteQuestion}
-              editEntry={editEntry}
-              setEditing={setEditing} />
-          </div>
-        ) :  <h3>Try adding a question.</h3>
+            <div className="wrapper">
+              <button onClick={() => deleteAll}>Sort alphabetically</button>
+              <button>Delete all</button>
+              <QuestionList
+                entries={entries}
+                deleteQuestion={deleteQuestion}
+                editEntry={editEntry}
+                setEditing={setEditing} />
+            </div>
+          </>
+        ) :  (
+          <div className="wrapper">
+            <h3>Try adding a question.</h3>
+          </div> )
       }
 
       { editing ? ( <EditForm selected={selected} updateEntry={updateEntry}/>): (<FormHook addQuestion={addQuestion}  />) }

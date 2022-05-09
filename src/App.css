@@ -1,6 +1,9 @@
 
 .wrapper {
   background-color: #40A8C4;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  flex-wrap: wrap;
 }
 
 h1 {
