@@ -53,19 +53,25 @@ function App() {
     setEntries([])
   }
 
+  const reset = () => {
+    setEntries([entry])
+  }
+
   // Sorting
 
   const [order, setOrder] = useState("ASC")
-    const sortAlphabetically = (text) => {
-      console.log(text)
-      if (order === "ASC") {
-        console.log(entries.question)
-        const sorted = [...entries].sort((a, b) => a.question.localeCompare(b.question))
-        console.log(sorted);
-        setEntries(sorted);
-        setOrder("DSC");
-      };
-    }
+  const sortAlphabetically = (text) => {
+    console.log(text)
+    if (order === "ASC") {
+      console.log(entries.question)
+      const sorted = [...entries].sort((a, b) => a.question.localeCompare(b.question))
+      console.log(sorted);
+      setEntries(sorted);
+      setOrder("DSC");
+    };
+  }
+
+
 
 
   return (
@@ -80,6 +86,7 @@ function App() {
           <div className="justify-content-center">
             <div className='action-buttons'>
               <button className="btn btn-sort" onClick={() => sortAlphabetically(entries)}>Sort</button>
+              <button className="btn btn-sort" onClick={() => reset()}>Reset</button>
               <button className="btn btn-delete" onClick={() => deleteAll()}>Delete all</button>
             </div>
             <div className="wrapper entries">
