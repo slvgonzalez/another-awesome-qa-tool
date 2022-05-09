@@ -11,7 +11,7 @@ const QuestionList = (props) => {
       <summary><strong>Q:</strong>{entry.question}</summary>
         <p><strong>A:</strong>{entry.answer}</p>
       </details>
-      <div className="actions">
+      <div className="action-buttons">
         <button
           className="btn btn-sort"
           onClick={() => {props.editEntry(entry)}}>
