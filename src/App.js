@@ -10,13 +10,14 @@ import EditForm from './components/EditForm.js';
 function App() {
 
   const entry = {
-    question: "esto seriadfkjhkshkf",
-    answer: "jfdjijiesfijieeis",
+    question: "How long did it take you to complete this assigment?",
+    answer: "It took me hours because I was trying to add different things",
     id: uuidv4()
   }
 
   const [entries, setEntries] = useState([entry])
 
+  // CRUD
   const addQuestion = (newQuestion) => {
     newQuestion.id = uuidv4();
     setEntries([...entries, newQuestion])
@@ -52,6 +53,20 @@ function App() {
     setEntries([])
   }
 
+  // Sorting
+
+  const [order, setOrder] = useState("ASC")
+    const sortAlphabetically = (text) => {
+      console.log(text)
+      if (order === "ASC") {
+        console.log(entries.question)
+        const sorted = [...entries].sort((a, b) => a.question.localeCompare(b.question))
+        console.log(sorted);
+        setEntries(sorted);
+        setOrder("DSC");
+      };
+    }
+
 
   return (
     <div className="container mt-5">
@@ -64,9 +79,11 @@ function App() {
         (entries.length > 0) ? (
           <div className="justify-content-center">
             <h3>Listed questions</h3>
+            <div className='action-buttons'>
+              <button className="btn btn-sort" onClick={() => sortAlphabetically(entries)}>Sort</button>
+              <button className="btn btn-delete" onClick={() => deleteAll()}>Delete all</button>
+            </div>
             <div className="wrapper">
-              <button>Sort alphabetically</button>
-              <button onClick={() => deleteAll()}>Delete all</button>
               <QuestionList
                 entries={entries}
                 deleteQuestion={deleteQuestion}

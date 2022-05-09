@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const QuestionList = (props) => {
 
@@ -13,7 +13,7 @@ const QuestionList = (props) => {
       </details>
       <div className="actions">
         <button
-          className="btn btn-primary"
+          className="btn-edit"
           onClick={() => {props.editEntry(entry)}}>
           Edit</button>
         <button
