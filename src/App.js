@@ -9,13 +9,13 @@ import EditForm from './components/EditForm.js';
 
 function App() {
 
-  const entry = {
+  const defaultEntry = {
     question: "Will I complete the assigment by Tuesday?",
     answer: "I hope so, I can't promise the form will be properly styled tough 😭",
     id: uuidv4()
   }
 
-  const [entries, setEntries] = useState([entry])
+  const [entries, setEntries] = useState([defaultEntry])
 
   // CRUD
   const addQuestion = (newQuestion) => {
