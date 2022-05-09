@@ -3,11 +3,12 @@ import { useForm } from "react-hook-form";
 
 const EditForm = (props) => {
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors }, setValue } = useForm({
     defaultValues: props.selected
   })
 
-  console.log(props.selected)
+  setValue('question', props.selected.question)
+  setValue('answer', props.selected.answer)
 
   const onSubmit = (e) => {
     //console.log(newEntry)
@@ -16,7 +17,7 @@ const EditForm = (props) => {
 
   return (
     <>
-    <h3>Edit quiestion</h3>
+    <h3>Edit question</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="name">Question:</label>
         <input
