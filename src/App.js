@@ -32,8 +32,6 @@ function App() {
   return (
     <div className="container mt-5">
       <h1>The awesome Q&A tool</h1>
-      <FormHook addQuestion={addQuestion}  />
-      <EditForm />
       {
         (entries.length > 0) ? (
           <div className="listed">
@@ -41,10 +39,11 @@ function App() {
             <QuestionList entries={entries} deleteQuestion={deleteQuestion} />
           </div>
         ) :  <h3>Try adding a question.</h3>
-
       }
+
+      { editing ? ( <EditForm /> ): (<FormHook addQuestion={addQuestion}  />) }
     </div>
-  );
+  )
 }
 
 export default App;
