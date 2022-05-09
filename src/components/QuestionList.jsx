@@ -13,11 +13,11 @@ const QuestionList = (props) => {
       </details>
       <div className="actions">
         <button
-          className="btn-edit"
+          className="btn btn-sort"
           onClick={() => {props.editEntry(entry)}}>
           Edit</button>
         <button
-          className="btn-delete"
+          className="btn btn-delete"
           onClick={() => props.deleteQuestion(entry.id)}>
           Delete</button>
       </div>

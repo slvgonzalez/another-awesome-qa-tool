@@ -42,7 +42,7 @@ const EditForm = (props) => {
         {errors.answer && errors.answer.type === "minLength" && <span className="text-danger text-small d-block mb-2">The answer must be elavorated (min 10 characters).</span>}
 
         <button
-          className="btn btn-primary">
+          className="btn btn-add">
           Save changes
         </button>
       </form>

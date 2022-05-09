@@ -43,7 +43,7 @@ const FormHook = (props) => {
         {errors.answer && errors.answer.type === "required" && <span className="text-danger text-small d-block mb-2">An answer is required</span>}
         {errors.answer && errors.answer.type === "minLength" && <span className="text-danger text-small d-block mb-2">The answer must be elavorated (min 10 characters).</span>}
 
-        <button className="btn btn-primary">Add question</button>
+        <button className="btn btn-add">Add question</button>
       </form>
     </>
   )
