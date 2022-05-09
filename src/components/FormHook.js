@@ -20,12 +20,13 @@ const FormHook = (props) => {
   return (
     <>
     <h3>Add a new question</h3>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="form-group">
         <label htmlFor="name">Question:</label>
         <input
-            className="form-control my-2"
+            className="form-control"
             id="question"
             type="text"
+            placeholder="Type your question here"
             {...register('question', { required: true, minLength: 10 })}
         />
 
@@ -37,6 +38,7 @@ const FormHook = (props) => {
           className="form-control my-2"
           id="answer"
           type="text"
+          placeholder="Type your answer here"
           {...register('answer', { required: true, minLength: 10 })}
         />
 

@@ -54,7 +54,7 @@ function App() {
   }
 
   const reset = () => {
-    setEntries([entry])
+    setEntries([defaultEntry])
   }
 
   // Sorting
