@@ -62,18 +62,18 @@ function App() {
 
       {
         (entries.length > 0) ? (
-          <>
+          <div className="justify-content-center">
             <h3>Listed questions</h3>
             <div className="wrapper">
-              <button onClick={() => deleteAll}>Sort alphabetically</button>
-              <button>Delete all</button>
+              <button>Sort alphabetically</button>
+              <button onClick={() => deleteAll()}>Delete all</button>
               <QuestionList
                 entries={entries}
                 deleteQuestion={deleteQuestion}
                 editEntry={editEntry}
                 setEditing={setEditing} />
             </div>
-          </>
+          </div>
         ) :  (
           <div className="wrapper">
             <h3>Try adding a question.</h3>

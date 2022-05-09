@@ -2,7 +2,7 @@ import React from 'react'
 
 const QuestionList = (props) => {
 
-  console.log(props.entries)
+  //console.log(props.entries)
 
   const listEntries = props.entries.map((entry) =>
 
