@@ -10,8 +10,8 @@ const EditForm = (props) => {
   setValue('question', props.selected.question)
   setValue('answer', props.selected.answer)
 
-  const onSubmit = (e) => {
-    //console.log(newEntry)
+  const onSubmit = (info, e) => {
+    props.updateEntry(props.selected.id, info)
     e.target.reset();
   }
 
