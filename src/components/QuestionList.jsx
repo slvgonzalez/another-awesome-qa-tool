@@ -6,7 +6,8 @@ const QuestionList = (props) => {
 
   const listEntries = props.entries.map((entry) =>
 
-    <div className="card" key={entry.id}>
+
+  <div className="card" key={entry.id}>
       <details>
       <summary><strong>Q:</strong>{entry.question}</summary>
         <p><strong>A:</strong>{entry.answer}</p>
@@ -22,8 +23,9 @@ const QuestionList = (props) => {
   )
 
   return (
+
     <div className="list">
-    {listEntries}
+      {listEntries}
     </div>
   )
 }
