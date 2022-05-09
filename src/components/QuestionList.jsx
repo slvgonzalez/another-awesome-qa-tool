@@ -17,7 +17,7 @@ const QuestionList = (props) => {
           onClick={() => {props.editEntry(entry)}}>
           Edit</button>
         <button
-          className="btn btn-primary"
+          className="btn-delete"
           onClick={() => props.deleteQuestion(entry.id)}>
           Delete</button>
       </div>
