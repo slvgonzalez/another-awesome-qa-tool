@@ -35,6 +35,7 @@ function App() {
   })
 
   const editEntry = (editEntry) => {
+    setEditing(true)
     setSelected({
       id: editEntry.id,
       question: editEntry.question,
@@ -53,12 +54,13 @@ function App() {
             <QuestionList
               entries={entries}
               deleteQuestion={deleteQuestion}
+              editEntry={editEntry}
               setEditing={setEditing} />
           </div>
         ) :  <h3>Try adding a question.</h3>
       }
 
-      { editing ? ( <EditForm /> ): (<FormHook addQuestion={addQuestion}  />) }
+      { editing ? ( <EditForm selected={selected}/> ): (<FormHook addQuestion={addQuestion}  />) }
     </div>
   )
 }

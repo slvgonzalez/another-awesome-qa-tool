@@ -3,12 +3,14 @@ import { useForm } from "react-hook-form";
 
 const EditForm = (props) => {
 
-  const { register, handleSubmit, formState: { errors } } = useForm()
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    defaultValues: props.selected
+  })
 
+  console.log(props.selected)
 
-  const onSubmit = (newEntry, e) => {
+  const onSubmit = (e) => {
     //console.log(newEntry)
-    props.addQuestion(newEntry);
     e.target.reset();
   }
 

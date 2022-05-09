@@ -14,7 +14,7 @@ const QuestionList = (props) => {
       </details>
       <button
         className="btn btn-primary"
-        onClick={() => {props.setEditing(true)}}>
+        onClick={() => {props.editEntry(entry)}}>
         Edit</button>
       <button
         className="btn btn-primary"
