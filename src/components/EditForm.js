@@ -14,7 +14,7 @@ const EditForm = (props) => {
 
   return (
     <>
-    <h3>Add a new question</h3>
+    <h3>Edit quiestion</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="name">Question:</label>
         <input
@@ -38,7 +38,10 @@ const EditForm = (props) => {
         {errors.answer && errors.answer.type === "required" && <span className="text-danger text-small d-block mb-2">An answer is required</span>}
         {errors.answer && errors.answer.type === "minLength" && <span className="text-danger text-small d-block mb-2">The answer must be elavorated (min 10 characters).</span>}
 
-        <button className="btn btn-primary">Save changes</button>
+        <button
+          className="btn btn-primary">
+          Save changes
+        </button>
       </form>
     </>
   )

@@ -12,11 +12,14 @@ const QuestionList = (props) => {
       <summary><strong>Q:</strong>{entry.question}</summary>
         <p><strong>A:</strong>{entry.answer}</p>
       </details>
-      <button className="btn btn-primary">Edit</button>
       <button
         className="btn btn-primary"
-        onClick={() => props.deleteQuestion(entry.id)}
-        >Delete</button>
+        onClick={() => {props.setEditing(true)}}>
+        Edit</button>
+      <button
+        className="btn btn-primary"
+        onClick={() => props.deleteQuestion(entry.id)}>
+        Delete</button>
     </div>
   )
 

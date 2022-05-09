@@ -28,6 +28,20 @@ function App() {
 
   const [editing, setEditing] = useState(false);
 
+  const [selected, setSelected] = useState({
+    id: null,
+    question: "",
+    answer: ""
+  })
+
+  const editEntry = (editEntry) => {
+    setSelected({
+      id: editEntry.id,
+      question: editEntry.question,
+      answer: editEntry.answer
+    })
+  }
+
 
   return (
     <div className="container mt-5">
@@ -36,7 +50,10 @@ function App() {
         (entries.length > 0) ? (
           <div className="listed">
             <h3>Listed questions</h3>
-            <QuestionList entries={entries} deleteQuestion={deleteQuestion} />
+            <QuestionList
+              entries={entries}
+              deleteQuestion={deleteQuestion}
+              setEditing={setEditing} />
           </div>
         ) :  <h3>Try adding a question.</h3>
       }
