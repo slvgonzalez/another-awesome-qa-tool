@@ -10,8 +10,8 @@ import EditForm from './components/EditForm.js';
 function App() {
 
   const entry = {
-    question: "How long did it take you to complete this assigment?",
-    answer: "It took me hours because I was trying to add different things",
+    question: "What is taking me ",
+    answer: "Lots of",
     id: uuidv4()
   }
 
