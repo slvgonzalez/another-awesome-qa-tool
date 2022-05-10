@@ -20,6 +20,9 @@ const FormHook = (props) => {
   return (
     <>
     <h3>Add a new question</h3>
+      <div id="anim">
+        <span class="tooltip" data-tooltip="You can find created questions and answers here.">?</span>
+      </div>
       <form onSubmit={handleSubmit(onSubmit)} className="form-group">
         <label htmlFor="name">Question:</label>
         <input
@@ -38,6 +41,7 @@ const FormHook = (props) => {
           className="form-control my-2"
           id="answer"
           type="text"
+          rows="4"
           placeholder="Type your answer here"
           {...register('answer', { required: true, minLength: 10 })}
         />

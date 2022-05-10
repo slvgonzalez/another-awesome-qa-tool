@@ -4,7 +4,7 @@
   border: 0 solid #e2e8f0;
   border-radius: 1.5rem;
   box-sizing: border-box;
-  color:  #235784;
+  color:  #06113C;
   cursor: pointer;
   display: inline-block;
   font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -20,7 +20,7 @@
 
 .btn-delete {
   background-color: #fff;
-  color: #235784;
+  color: #06113C;
   min-width: 130px;
   width: 130px;
 }
@@ -32,19 +32,19 @@
 
 .btn-sort {
   background-color: #fff;
-  color: #235784;
+  color: #06113C;
   min-width: 85px;
   max-width: 130px;
 }
 
 .btn-sort:hover {
-  background-color: #235784;
+  background-color: #06113C;
   color: #fff;
 }
 
 .btn-add {
-  background-color: #F7AA00;;
-  color:#235784;
+  background-color: #F7AA00;
+  color:#06113C;
   min-width: 162px;
   display: flex;
   justify-content: center;
@@ -55,3 +55,37 @@
   justify-content: space-evenly;
   margin-bottom: 1rem;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+ }
+
+ .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 4em;
+  background-color: rgba(0, 0, 0, 0.253);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  left: 110%;
+ }
+
+ .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.253) transparent transparent;
+ }
+
+ .tooltip:hover .tooltiptext {
+  visibility: visible;
+ }

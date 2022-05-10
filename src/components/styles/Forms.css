@@ -6,14 +6,13 @@ form {
 }
 
 label {
-  color:#0d172a;
+  color:#06113C;
 }
 
 input {
-  min-width: 400px;
+  display: inline-block;
+  word-wrap: break-word;
+  width: 500px;
   max-width: 700px;
-  height: 3rem;
   inline-size: 380px;
-  overflow-wrap: break-word;
-  hyphens: manual
 }

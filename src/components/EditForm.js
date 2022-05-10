@@ -17,11 +17,11 @@ const EditForm = (props) => {
 
   return (
     <>
-    <h3>Edit question</h3>
-      <form onSubmit={handleSubmit(onSubmit)} className="wrapper">
+    <h3>Editing</h3>
+      <form onSubmit={handleSubmit(onSubmit)} className="wrapper form-group">
         <label htmlFor="name">Question:</label>
         <input
-            className="form-control my-2"
+            className="form-control"
             id="question"
             type="text"
             {...register('question', { required: true, minLength: 10 })}
