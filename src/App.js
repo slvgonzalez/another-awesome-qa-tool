@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import FormHook from './components/FormHook.js'
 import QuestionList from './components/QuestionList.jsx';
+import EditForm from './components/EditForm.js';
 import { v4 as uuidv4 } from 'uuid';
 //import Form from './components/Form.js'
 import './App.css';
-import EditForm from './components/EditForm.js';
 
 
 function App() {
 
-  const entry = {
+  const defaultEntry = {
     question: "Will I complete the assigment by Tuesday?",
     answer: "I hope so, I can't promise the form will be properly styled tough 😭",
     id: uuidv4()
   }
 
-  const [entries, setEntries] = useState([entry])
+  const [entries, setEntries] = useState([defaultEntry])
 
   // CRUD
   const addQuestion = (newQuestion) => {
@@ -53,33 +53,29 @@ function App() {
     setEntries([])
   }
 
-  // Sorting
+  const reset = () => {
+    setEntries([defaultEntry])
+  }
 
-  const [order, setOrder] = useState("ASC")
-    const sortAlphabetically = (text) => {
-      console.log(text)
-      if (order === "ASC") {
-        console.log(entries.question)
-        const sorted = [...entries].sort((a, b) => a.question.localeCompare(b.question))
-        console.log(sorted);
-        setEntries(sorted);
-        setOrder("DSC");
-      };
-    }
+  // Sorting
+  const sortAlphabetically = () => {
+    const sorted = [...entries].sort((a, b) => a.question.localeCompare(b.question))
+    console.log(sorted);
+    setEntries(sorted);
+  }
 
 
   return (
     <div className="container mt-5">
 
       <h1>The not so awesome Q&A tool</h1>
-
       { editing ? ( <EditForm selected={selected} updateEntry={updateEntry}/>): (<FormHook addQuestion={addQuestion}  />) }
-
       {
         (entries.length > 0) ? (
           <div className="justify-content-center">
             <div className='action-buttons'>
               <button className="btn btn-sort" onClick={() => sortAlphabetically(entries)}>Sort</button>
+              <button className="btn btn-reset" onClick={() => reset()}>Reset</button>
               <button className="btn btn-delete" onClick={() => deleteAll()}>Delete all</button>
             </div>
             <div className="wrapper entries">

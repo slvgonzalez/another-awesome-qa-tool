@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #BCDBDF;
+  background-color: #EEEEEE;
+  min-width: fit-content;
 }
 
 .container {
@@ -14,4 +15,25 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: fit-content;
+}
+
+.wrapper {
+  background-color: #06113C;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  flex-wrap: wrap;
+  color: #fff;
+  margin-bottom: 1rem;
+  min-width: fit-content;
+}
+
+.wrapper .card {
+  background-color: #06113C;
+  border-radius: 1rem;
+  color: #fff;
+  min-width: fit-content;
+  width: 30rem;
+  padding: 1rem;
+  padding-top:0%;
 }

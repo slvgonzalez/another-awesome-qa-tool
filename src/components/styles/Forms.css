@@ -6,14 +6,39 @@ form {
 }
 
 label {
-  color:#0d172a;
+  color:#06113C;
 }
 
+.form-control {
+  padding: 0.5rem 0.75rem;
+  width: 500px;
+}
+
+
 input {
-  min-width: 400px;
+  display: inline-block;
+  word-wrap: break-word;
+  min-width: 350px;
+  width: 500px;
   max-width: 700px;
-  height: 3rem;
   inline-size: 380px;
-  overflow-wrap: break-word;
-  hyphens: manual
+  caret-color: #06113C;
+  height: fit-content;
+}
+
+.form-group {
+  min-width: 300px;
+}
+
+.form-group > input:focus {
+  outline: #F7AA00 solid 2px;
+  height: fit-content;
+}
+
+.form-group > input:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.wrapper label {
+  color: white;
 }
