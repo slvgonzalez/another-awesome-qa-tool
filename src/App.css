@@ -19,8 +19,10 @@ h3 {
   color: white;
 }
 
-summary strong {
+summary {
   color: #F7AA00;
+  font-weight: 600;
+  margin-top: 1rem;
 }
 
 ::marker {

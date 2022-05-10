@@ -43,8 +43,6 @@
   .btn-delete {
     background-color: #fff;
     color: #06113C;
-    min-width: 130px;
-    width: 130px;
   }
 
   .btn-delete:hover {
@@ -72,3 +70,29 @@
     background-color: #F7AA00;
     color: #06113C;
   }
+
+/* ICON BUTTONS */
+.icon-action-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  background-color: rgb(6, 17, 60, 0.6);
+  border: 0 solid #e2e8f0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+
+.icon-btn svg {
+  fill:white;
+  height: 1rem;
+  margin: 0.5rem 0.3rem;
+}
