@@ -9,6 +9,11 @@ label {
   color:#06113C;
 }
 
+.form-control {
+  padding: 0.5rem 0.75rem;
+  width: 500px;
+}
+
 
 input {
   display: inline-block;
