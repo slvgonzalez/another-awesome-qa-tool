@@ -15,3 +15,17 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.wrapper {
+  background-color: #06113C;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  flex-wrap: wrap;
+  color: #fff;
+  margin-bottom: 1rem;
+  min-width: 400px;
+}
+
+.wrapper .entries {
+  background-color: #06113C opacity(0.6);
+}

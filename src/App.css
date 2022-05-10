@@ -2,20 +2,6 @@
 @import "components/styles/Forms.css";
 @import "components/styles/Tooltip.css";
 
-.wrapper {
-  background-color: #06113C;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  flex-wrap: wrap;
-  color: #fff;
-  margin-bottom: 1rem;
-  min-width: 400px;
-}
-
-.wrapper .entries {
-  background-color: #06113C opacity(0.6);
-}
-
 h1, h2, h4 {
   text-align: center;
   font-size: 7vh;
@@ -27,6 +13,10 @@ h3 {
   text-align: center;
   font-size: 20px;
   color: #06113C;
+}
+
+.wrapper h3 {
+  color: white;
 }
 
 summary strong {
