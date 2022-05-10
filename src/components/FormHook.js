@@ -1,15 +1,9 @@
-import React, { useState }from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 
 const FormHook = (props) => {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
-
-  const [ entries, setEntries ] = useState([{
-    question: "First question",
-    answer: "First answer"
-  }])
-
 
   const onSubmit = (newEntry, e) => {
     //console.log(newEntry)
@@ -20,9 +14,6 @@ const FormHook = (props) => {
   return (
     <>
     <h3>Add a new question</h3>
-      <div id="anim">
-        <span className="tooltip" data-tooltip="You can find created questions and answers here.">?</span>
-      </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
           <label htmlFor="name">Question:</label>
