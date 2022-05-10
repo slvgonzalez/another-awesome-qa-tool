@@ -27,7 +27,7 @@ const FormHook = (props) => {
         <div className="form-group">
           <label htmlFor="name">Question:</label>
           <input
-              className="form-control"
+              className="form-control my-2"
               id="question"
               type="text"
               placeholder="Type your question here"

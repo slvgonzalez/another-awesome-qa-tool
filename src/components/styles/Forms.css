@@ -18,11 +18,20 @@ input {
   max-width: 700px;
   inline-size: 380px;
   caret-color: #06113C;
+  height: fit-content;
 }
-
 
 .form-group {
   min-width: 300px;
+}
+
+.form-group > input:focus {
+  outline: #F7AA00 solid 2px;
+  height: fit-content;
+}
+
+.form-group > input:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .wrapper label {
