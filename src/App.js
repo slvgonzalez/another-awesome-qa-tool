@@ -84,7 +84,7 @@ function App() {
           <div className="justify-content-center">
             <div className='action-buttons'>
               <button className="btn btn-sort" onClick={() => sortAlphabetically(entries)}>Sort</button>
-              <button className="btn btn-sort" onClick={() => reset()}>Reset</button>
+              <button className="btn btn-reset" onClick={() => reset()}>Reset</button>
               <button className="btn btn-delete" onClick={() => deleteAll()}>Delete all</button>
             </div>
             <div className="wrapper entries">
