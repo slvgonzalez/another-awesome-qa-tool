@@ -32,7 +32,6 @@ const FormHook = (props) => {
               type="text"
               placeholder="Type your question here"
               {...register('question', { required: true, minLength: 10 })}
-              onKeyPress={() => this.style.width = ((this.value.length + 1) * 8) + 'px'}
           />
 
           { errors.question && errors.question.type === "required" && <span className="text-danger text-small d-block mb-2">A question is required.</span> }
@@ -46,7 +45,6 @@ const FormHook = (props) => {
             rows="4"
             placeholder="Type your answer here"
             {...register('answer', { required: true, minLength: 10 })}
-            onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';"
           />
 
           {errors.answer && errors.answer.type === "required" && <span className="text-danger text-small d-block mb-2">An answer is required</span>}
