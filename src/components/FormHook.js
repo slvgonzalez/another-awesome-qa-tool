@@ -19,11 +19,11 @@ const FormHook = (props) => {
         <div className="form-group">
           <label htmlFor="name">Question:</label>
           <input
-              className="form-control my-2"
-              id="question"
-              type="text"
-              placeholder="Type your question here"
-              {...register('question', { required: true, minLength: 10 })}
+            className="form-control my-2"
+            id="question"
+            type="text"
+            placeholder="Type your question here"
+            {...register('question', { required: true, minLength: 10 })}
           />
 
           { errors.question && errors.question.type === "required" && <span className="text-danger text-small d-block mb-2">A question is required.</span> }
@@ -41,6 +41,7 @@ const FormHook = (props) => {
 
           {errors.answer && errors.answer.type === "required" && <span className="text-danger text-small d-block mb-2">An answer is required</span>}
           {errors.answer && errors.answer.type === "minLength" && <span className="text-danger text-small d-block mb-2">The answer must be elavorated (min 10 characters).</span>}
+
         </div>
         <button className="btn btn-add">Add question</button>
       </form>

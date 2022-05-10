@@ -20,7 +20,6 @@ const EditForm = (props) => {
     <h3>Editing</h3>
       <form onSubmit={handleSubmit(onSubmit)} className="wrapper">
         <div className="form-group">
-
           <label htmlFor="name">Question:</label>
           <input
               className="form-control"

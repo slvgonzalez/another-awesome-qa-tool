@@ -18,7 +18,7 @@ label {
 input {
   display: inline-block;
   word-wrap: break-word;
-  min-width: auto;
+  min-width: 350px;
   width: 500px;
   max-width: 700px;
   inline-size: 380px;

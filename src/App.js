@@ -58,7 +58,6 @@ function App() {
   }
 
   // Sorting
-
   const sortAlphabetically = () => {
     const sorted = [...entries].sort((a, b) => a.question.localeCompare(b.question))
     console.log(sorted);
@@ -71,7 +70,6 @@ function App() {
 
       <h1>The not so awesome Q&A tool</h1>
       { editing ? ( <EditForm selected={selected} updateEntry={updateEntry}/>): (<FormHook addQuestion={addQuestion}  />) }
-
       {
         (entries.length > 0) ? (
           <div className="justify-content-center">
