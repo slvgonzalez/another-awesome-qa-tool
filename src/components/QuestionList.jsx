@@ -13,7 +13,7 @@ const QuestionList = (props) => {
       </details>
       <div className="action-buttons">
         <button
-          className="btn btn-sort"
+          className="btn btn-edit"
           onClick={() => {props.editEntry(entry)}}>
           Edit</button>
         <button

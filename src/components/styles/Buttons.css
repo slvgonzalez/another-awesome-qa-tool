@@ -14,29 +14,7 @@
   text-align: center;
 }
 
-.btn-delete {
-  background-color: #fff;
-  color: #06113C;
-  min-width: 130px;
-  width: 130px;
-}
-
-.btn-delete:hover {
-  background-color: #E05D5D;
-  color: #fff;
-}
-
-.btn-sort {
-  background-color: #fff;
-  color: #06113C;
-  min-width: 85px;
-  max-width: 130px;
-}
-
-.btn-sort:hover {
-  background-color: #06113C;
-  color: #fff;
-}
+/* ADD QUESTION */
 
 .btn-add {
   background-color: #F7AA00;
@@ -46,8 +24,51 @@
   justify-content: center;
 }
 
+/* GROUP */
 .action-buttons {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 1rem;
 }
+
+.action-buttons button {
+  margin-bottom: 1rem;
+  min-width: 85px;
+  max-width: 130px;
+  background-color: #fff;
+  color: #06113C;
+}
+
+  /* DELETE */
+
+  .btn-delete {
+    background-color: #fff;
+    color: #06113C;
+    min-width: 130px;
+    width: 130px;
+  }
+
+  .btn-delete:hover {
+    background-color: #E05D5D;
+    color: #fff;
+  }
+
+  /* SORT */
+
+  .btn-sort:hover {
+    background-color: #06113C;
+    color: #fff;
+  }
+
+  /* RESET */
+
+  .btn-reset:hover {
+    background-color: #F7AA00;
+    color: #06113C;
+  }
+
+  /* EDIT */
+
+  .btn-edit:hover {
+    background-color: #F7AA00;
+    color: #06113C;
+  }
