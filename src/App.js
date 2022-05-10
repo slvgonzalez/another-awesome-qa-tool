@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import FormHook from './components/FormHook.js'
 import QuestionList from './components/QuestionList.jsx';
+import EditForm from './components/EditForm.js';
 import { v4 as uuidv4 } from 'uuid';
 //import Form from './components/Form.js'
 import './App.css';
-import EditForm from './components/EditForm.js';
 
 
 function App() {
@@ -59,16 +59,10 @@ function App() {
 
   // Sorting
 
-  const [order, setOrder] = useState("ASC")
-  const sortAlphabetically = (text) => {
-    console.log(text)
-    if (order === "ASC") {
-      console.log(entries.question)
-      const sorted = [...entries].sort((a, b) => a.question.localeCompare(b.question))
-      console.log(sorted);
-      setEntries(sorted);
-      setOrder("DSC");
-    };
+  const sortAlphabetically = () => {
+    const sorted = [...entries].sort((a, b) => a.question.localeCompare(b.question))
+    console.log(sorted);
+    setEntries(sorted);
   }
 
 
@@ -76,7 +70,6 @@ function App() {
     <div className="container mt-5">
 
       <h1>The not so awesome Q&A tool</h1>
-
       { editing ? ( <EditForm selected={selected} updateEntry={updateEntry}/>): (<FormHook addQuestion={addQuestion}  />) }
 
       {

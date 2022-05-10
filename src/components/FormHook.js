@@ -5,6 +5,7 @@ const FormHook = (props) => {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
 
+
   const onSubmit = (newEntry, e) => {
     //console.log(newEntry)
     props.addQuestion(newEntry);
