@@ -21,7 +21,7 @@ const FormHook = (props) => {
     <>
     <h3>Add a new question</h3>
       <div id="anim">
-        <span class="tooltip" data-tooltip="You can find created questions and answers here.">?</span>
+        <span className="tooltip" data-tooltip="You can find created questions and answers here.">?</span>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">

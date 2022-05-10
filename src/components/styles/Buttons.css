@@ -75,6 +75,7 @@
 .icon-action-buttons {
   display: flex;
   justify-content: flex-end;
+  gap: 0.7rem;
 }
 
 .icon-btn {
@@ -88,7 +89,6 @@
   font-weight: 600;
   line-height: 1;
   text-align: center;
-  margin-left: 0.5rem;
 }
 
 .icon-btn svg {
